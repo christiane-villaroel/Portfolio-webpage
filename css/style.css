@@ -1,0 +1,266 @@
+/**CSS Reset**/
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+h1,h2,h3{
+    margin: 0px;
+}
+
+html{
+    font-size: 16px
+}
+
+/**** Custom Text ****/
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+/****Custom Properties*****/
+
+:root{
+    --icon-color:#FF3B3f;
+    --bg-color: #8d8888;
+    --text-bg-color:#CAEBF2;
+   
+
+    --H-text-color: #A9A9A9;
+    --Para-text:#333;
+
+    --heading-font:'Karla', sans-serif;
+    --para-ff: 'Ubuntu Mono', monospace;
+}
+/***Background-Color and Styling**/
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    margin: 0%;
+    font-family: var(--para-ff);
+}
+
+
+/*Flex Box*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.projects-cont  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Grid Positioning*/
+
+.my-projects-container{
+    display: grid;
+    grid-template-areas: 
+    'project-1 project-2'
+    'project-3 project-4';
+    gap: 5rem;
+    width: 80%;
+    justify-content: center;
+}
+.project-1{
+    grid-area: project-1;
+} 
+.project-2{
+    grid-area: project-2;
+} 
+.project-3{
+    grid-area: project-3;
+} 
+.project-4{
+    grid-area: project-4;
+} 
+
+
+/******Stylings***********/
+/**Font Styling**/
+body{
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: normal;
+    font-size: 16px;
+    font-style: normal;
+}
+.bio{
+    color: var(--Para-text);
+    font-weight: normal;
+    line-height: 1.5;
+}
+p{
+    text-align: center;
+}
+figcaption{
+    color: #333;
+}
+a:link{
+    text-decoration: none;
+}
+/*Image Sizing*/
+img{
+    width: 200px;
+    border-radius: 5px;
+}
+
+
+/*This styling will make profile img into circle*/
+#profile-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+figcaption{
+    text-align: center;
+}
+
+.fa-light{
+    color: var(--icon-color);
+}
+
+/**Margin and Padding styling****/
+.bio{
+    background-color: var(--icon-color);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+/***Footer Styling****/
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem 3rem;
+}
+.icons {
+    width: 30px;
+    filter: invert(33%) sepia(99%) saturate(3080%) hue-rotate(337deg) brightness(107%) contrast(101%);
+}
+/*Border Styling*/
+.projects-cont{
+    padding: 1.5em 1em;
+    background-color: var(--text-bg-color);
+    width: 300px;
+}
+/**Hover Styling**/
+.projects-cont:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+/*Header and Menu Styling*/
+header{
+   padding: 1.5rem 2rem; 
+   margin-bottom: 20px;
+   background-color: var(--text-bg-color);
+}
+
+ /*Hamburger Menu*/
+ .hamburger {
+    position: fixed;
+    z-index: 100;
+    top:1rem;
+    right: 1rem;
+    padding:4px;
+    border:black solid 1px;
+    background:white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.menu{
+    position: fixed;
+    transform: translateY(-100%);/*transform: translateY(-100%); is used to hide the menu by default above the screen.*/
+    transition: transform 0.2s;
+    top: 0;
+    right: 0;
+    left: 70%;
+    bottom: 40%;
+    z-index: 99;
+    background-color: white;
+    color: var(--Para-text);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    max-width: 400px;
+
+}
+.showMenu{
+    transform: translateY(0);/*Menu will slide down and cover whole screen*/
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+i.closeIcon{
+    display:none;
+}
+li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+li:hover{
+    color: white;
+    background: var(--icon-color);
+    cursor:pointer;
+    
+}
+a.menuItem{
+    color: inherit;
+    font-size: 18px;
+    font-weight: normal;
+    text-align:center;
+   
+}
+
+/*Mobile Styling*/
+@media screen and (max-width: 600px) {
+    #lastName{
+        display: none;
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu{
+        right: 0%;
+        left: 0%;
+    }
+    .hamburger{
+        width: 35px;
+        position: fixed;
+        top: .5rem;
+        left: 5px;
+        z-index: 5050;
+    }
+    .my-projects-container{
+        display: flex;
+        flex-direction: column;
+    }
+   
+}
