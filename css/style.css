@@ -156,6 +156,7 @@ footer{
     padding: 1.5em 1em;
     background-color: var(--text-bg-color);
     width: 300px;
+    border-radius: 8px;
 }
 /**Hover Styling**/
 .projects-cont:hover {
@@ -250,6 +251,7 @@ a.menuItem{
     .menu{
         right: 0%;
         left: 0%;
+        width: 100%;
     }
     .hamburger{
         width: 35px;

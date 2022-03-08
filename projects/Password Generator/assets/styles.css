@@ -1,0 +1,139 @@
+/*CSS Reset*/
+*{
+    margin: 0px;
+    padding: 0px;  
+}
+/**Import Google Fonts**/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+/*Custom CSS Styling*/
+:root{
+    /**Google Fonts**/
+    --inter-font:'Inter', sans-serif;
+    --karla-font:'Inter', sans-serif;
+
+    --H1-size:40px;
+    --text-size:20px;
+
+    /*button properties*/
+    --btn-font-size:16px;
+
+    /*Colors*/
+    --body-color: #1C1C1C;
+    --main-bg-color:#1F2937;
+    /*bg colors*/
+    --green-btn:#10B981;
+    --passwords-bg:#273549;
+    --placholder-color: #202B3C;
+    /**Text Colors**/
+    --text-white:  #FFFFFF;
+    --text-grey:#D5D4D8;
+    --green-password: #55F991;
+}
+
+/*Defaut Font Stylings*/
+html{
+    font-size: 16px; /* use for rem*/
+}
+body{
+    font-family: var(--inter-font);
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+}
+main{
+    padding: 3rem 1rem;
+}
+
+/* CSS Grid & Flexbox*/
+body{
+    height: 100vh;
+    width: 100%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.password-titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+    column-gap: 20px;
+    padding: 5rem 1.5rem 35px;
+   
+}
+
+/**Grid Position for Random Passwords**/
+#grid-inputs-container{
+    display: grid;
+    grid-template-areas:
+     "password-1 password-2"
+     "password-3 password-4" ;
+margin-top: 1.5rem;
+margin-bottom: 1rem;
+}
+#passowrds-1{grid-area: password-1;}
+#passowrds-2{grid-area: password-2;}
+#passowrds-3{grid-area: password-3;}
+#passowrds-4{grid-area: password-4;}
+
+/***Font stylings & Positioning****/
+.password-titles{
+    font-family: var(--karla-font);
+}
+h1{
+    font-weight: 800;
+    color: var(--text-white);
+    font-size: var(--H1-size);
+} 
+span {
+     color: var(--green-password);
+ }
+ h1 + p {
+     color: var(--text-grey);
+     font-size: var(--text-size);
+ }
+ /**Button Styling**/
+ .fa-solid{
+     margin-right: 5px;
+ }
+ #btns{
+     border: none;
+     border-radius: 4px;
+     max-width: 200px;
+     padding: .5rem .5rem;
+     background-color: var(--green-btn);
+     color: var(--text-grey);
+    }
+.line-break{
+    border:1px solid #2F3E53;
+    
+}
+
+
+.newpasswords {
+    margin: 1rem 0em 0rem 1rem;
+    padding: .5em 1.5em;
+    max-width: 120px;
+    text-align: center;
+    font-weight: bold;
+    font-family: var(--inter-font);
+    color: var(--green-btn);
+    font-size: var(--btn-font-size);
+    border-radius: 6px;
+    background-color: var(--passwords-bg);
+}
+
+/****Background color for Body and Main****/
+body{
+    background-color: var(--body-color);
+}
+main{
+    background-color: var(--main-bg-color);
+}
+

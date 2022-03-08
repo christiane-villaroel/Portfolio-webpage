@@ -1,0 +1,191 @@
+/*CSS Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;	
+}
+
+*{
+    margin:0px;
+    padding: 0px;
+
+}
+body{
+    height: 100vh;
+    width: 100%;
+}
+/*Font Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Poppins:wght@400;600&family=Ubuntu+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Open+Sans&family=Poppins:wght@400;600&family=Ubuntu+Mono:wght@400;700&display=swap');
+/*Custom Properties*/
+:root{
+    /*Colors*/
+    --purple:hsl(257, 40%, 49%);
+    
+    /*Font*/
+    --normal-weight:400;
+    --Header-weight:600;
+    /*Font-family*/
+    --FF-body: 'Open Sans', sans-serif;
+    --FF-Headings:'Poppins', sans-serif;
+}
+
+
+/*Background Design*/
+body{
+    background-image: url(bg-desktop.svg) ;
+    background-size: 100% auto;
+    background-color: var(--purple);
+    background-repeat: no-repeat;
+}
+
+/*Mobile Design*/
+
+/*Font Styling*/
+body{
+    font-family: var(--FF-body);
+    font-weight: var(--normal-weight);
+    font-size: 16px;
+    font-style: var(--FF-body);
+    color: white;
+}
+
+
+/*Flex-box*/
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/*Register Content Flexbox*/
+.content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+/*Header Flexbox*/
+header{
+    width: 100%;   
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+
+/*Content Styling*/
+.illustration{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#illustration-main{
+   width: 80%;
+}
+h2{
+    line-height: 1.5;
+    font-weight: var(--Header-weight);
+    font-family: var(--FF-Headings);
+    font-style: var(--FF-Headings);
+    text-align: center;
+    font-size: 25px;
+}
+p{
+    line-height: 1.5;
+    font-weight: var(--normal-weight);
+    font-style:var(--FF-body);
+    text-align: center;
+    font-size: 20px;
+    color: rgb(233, 233, 233);
+}
+
+/*Button Styling*/
+button{
+    font-size: 16px;
+    color: var(--purple);
+    background-color: white;
+    padding: .75rem 4rem;
+    border: none;
+    border-radius: 20px;
+    max-width: 250px;
+}
+
+/*Footer styling*/
+footer{
+    display: flex;
+    flex-direction: row;
+
+}
+.socials-icons{
+    width: 20px;
+    filter: invert(100%) sepia(0%) saturate(7430%) hue-rotate(11deg) brightness(92%) contrast(114%);
+   border: none;
+   display: flex;
+}
+.img-border{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: solid white 1px;
+    border-radius: 15px;
+    padding: 2px;
+}
+
+/*Desktop Styling*/
+@media screen and (min-width:600px) {
+    body{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+    header{
+        grid-area: header;
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        grid-area: main;
+    }
+    footer{
+        width: 95%;
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+    }
+   /* #illustration-main{
+        max-width: 300px;
+    }
+    .illustration{
+        width: 300px;
+    }
+    .content-container{
+        width: 200px;
+    }*/
+}
+
