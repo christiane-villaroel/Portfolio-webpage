@@ -198,6 +198,11 @@ button{
     }
    #illustration-main{
      width: 100%;
+     
+    }
+    #huddle-logo{
+        width: 300px;
+        margin-left: 4rem;
     }
     .content-container{
        width: 40%;
