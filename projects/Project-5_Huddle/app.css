@@ -78,6 +78,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    padding: 1.5rem;
 }
 /*Header Flexbox*/
 header{
@@ -108,12 +109,13 @@ h2{
     font-size: 25px;
 }
 p{
-    line-height: 1.5;
+    line-height: normal;
     font-weight: var(--normal-weight);
     font-style:var(--FF-body);
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(233, 233, 233);
+   
 }
 
 /*Button Styling*/
